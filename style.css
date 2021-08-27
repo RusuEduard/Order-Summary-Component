@@ -4,6 +4,7 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --hover-blue: hsl(245, 70%, 59%);
 }
 
 body{
@@ -65,8 +66,8 @@ p{
 }
 
 .card .subscription{
-  height: 80px;
-  width: 270px;
+  min-height: 80px;
+  width: 90%;
   background-color: var(--very-pale-blue);
   border-radius: 20px;
   display: flex;
@@ -101,7 +102,8 @@ p{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   font-weight: 700;
   border-radius: 5px;
-  padding: 10px 70px;
+  width: 90%;
+  padding: 10px 0px;
   background-color: var(--bright-blue);
 }
 
@@ -110,4 +112,27 @@ p{
   text-decoration: none;
   font-weight: 700;
   color: var(--desaturated-blue);
+}
+
+@media only screen and (min-width: 376px) {
+  body{
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+
+  .card{
+    width: 350px;
+  }
+
+  .card .payment:hover{
+    background-color: var(--hover-blue);
+  }
+
+  .card .subscription .change:hover{
+    color: var(--hover-blue);
+    text-decoration: none;
+  }
+
+  .card .cancel:hover{
+    color:var(--dark-blue);
+  }
 }
